@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Register as a Candidate</title><!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"><!-- Add custom CSS here -->
+    <link href="css/RegisterCandidate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link href="css/NewCreate.css" rel="stylesheet" type="text/css">
+
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    
+       </head>
+
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><span class="sr-only">Toggle navigation</span></button> <a class="navbar-brand" href="index.html">Uvote</a>
+            </div><!-- Collect the nav links, forms, and other content for toggling -->
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active"><a href="Ongoing.php">On-going Elections</a></li>
+                    
+					<li><a href="NewCandidate.html">Contact Candidates</a></li>
+					
+                    <li><a href="charts.html">Previous Elections</a></li>
+
+                    <li><a href="RegisterCandidate.html">Register as Candidate</a></li>
+
+                    <li><a href="User.html">Home</a></li>
+
+                    <li><a href="logout.php">Logout</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+
+        <div class="row">
+            <div class="col-lg-13">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Register as a Candidate</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <h1 class="blue">Fill out the form below</h1>
+                        <hr>
+
+                        <form class="create">
+                            <p class="textbox">Student Name<input type="text" id="StudentName" name="StudentName"></p>
+
+                            <p class="textbox">Student Number<input type="text" id="StudentNumber" name="StudentNumber"></p>
+
+                            <div class="radios">
+                                <p class="textbox">What type of Election</p><input id="ClassElections" type="radio" name="group1" class="trigger1" data-rel="BISCLass" value="ClassElections"> <label for="ClassElections">Class elections</label> <input id="SocietyElections" type="radio" name="group1" data-rel="Positions" class="trigger" value="SocietyElections"> <label for="SocietyElections">BIS Society</label>
+                            </div>
+                            <hr>
+
+                            <div class="Positions content">
+                                <div class="checkbox">
+                                    <p class="textbox">Which positions are you running for?</p><input id="chkAuditor" type="checkbox" name="check" value="Auditor" class="trigger"> <label for="chkAuditor">Auditor</label><br>
+                                    <input id="chkVice" type="checkbox" name="check" value="ViceAuditor" class="trigger"> <label for="chkVice">Vice Auditor</label><br>
+                                    <input id="chkSocial" type="checkbox" name="check" value="SocialOfficer" class="trigger"> <label for="chkSocial">Social Officer</label><br>
+                                    <input id="chkEducation" type="checkbox" name="check" value="EducationOfficer" class="trigger"> <label for="chkEducation">Education Officer</label><br>
+                                    <input id="chkSports" type="checkbox" name="check" value="SportsOfficer" class="trigger"> <label for="chkSports">Sports Officer</label><br>
+                                    <input id="chkSecretary" type="checkbox" name="check" value="Secretary" class="trigger"> <label for="chkSecretary">Secretary</label><br>
+                                    <input id="chkFinanceOfficer" type="checkbox" name="check" value="FinanceOfficer" class="trigger"> <label for="chkFinanceOfficer">Finance Officer</label><br>
+                                    <input id="chkMastersRep" type="checkbox" name="check" value="MastersRep" class="trigger"> <label for="chkMastersRep">Masters Rep</label>
+                                    <hr>
+                                </div>
+                            </div>
+
+                           
+                            <div class="radio">
+                             <p class="textbox">Create a Profile?</p>
+	<input id="Yes" type="radio" name="group2" value="Yes">
+	<label for="Yes">Yes</label>
+	<input id="No" type="radio" name="group2" value="No">
+	<label for="No">No</label>
+                             </div><br>
+
+							 		<hr>
+							 	<div class="buttons">
+                                <input type="submit" value="Submit" id="Submit" class="btn btn-success">
+							 	</div>
+							 	<hr>
+                            <div class="buttons">
+                                <input type="submit" value="Submit" id="Submit" class="btn btn-primary"> <input type="submit" value="Clear" id="Reset" class="btn btn-danger">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+$('#Reset').click(function(){
+            $('#Election')[0].reset();
+ });
+ </script>
+ 
+ <script>
+	 $('.trigger').click(function(){
+		 $('.content').show();
+		 $('.' +(this).data('rel')).show();
+	 });
+ </script>
+ 
+ <script>
+ $('.trigger1').click(function(){
+	 $('.content').hide();
+	 $('.' +(this).data('rel')).hide();
+ });
+ </script>
+ 
+
+ 
+ <script>
+   $(document).on(' change','input[name="check_all"]',function() {
+            $('.idRow').prop("checked" , this.checked);
+    });
+</script> 
+
+        
+        
+        
+         <!-- Bootstrap core JavaScript -->
+         <script src="scripts/bootstrap.js" type="text/javascript">
+</script> <!-- Page Specific Plugins -->
+         <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js" type="text/javascript">
+</script> <script src="scripts/chart-data-morris.js" type="text/javascript">
+</script> <script src="scripts/jquery.tablesorter.js" type="text/javascript">
+</script> <script src="scripts/tables.js" type="text/javascript">
+</script>
+    </div>
+</body>
+</html>

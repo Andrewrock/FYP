@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Vote</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/Vote.css" rel="stylesheet">
+    
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link href='http://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
+	</head>
+
+
+  <body>
+
+ <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="User.html">Uvote</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li class="active"><a href="Ongoing.php"><i class="fa fa-dashboard"></i> On-going Elections</a></li>
+            <li><a href="NewCandidate.html"><i class="fa fa-comment-o"></i> Contact Candidates</a></li>
+            <li><a href=""><i class="fa fa-tasks"></i> Previous elections</a></li>
+            <li><a href="RegisterCandidate.html"><i class="fa fa-pencil"></i> Register as candidate</a></li>
+              <li><a href="User.html"><i class="fa fa-desktop"></i> Home</a></li>
+            <li><a href="logout.php"><i class="fa fa-user"></i> Logout</a></li>
+            
+            </li>
+          </ul>
+
+         </div><!-- /.navbar-collapse -->
+      </nav>
+         <form action="SocietyCreate_Submit.php" class="container" method="post">
+
+			    <div class="radios">
+    <h1>Select the Candidate you prefer below</h1>
+	<div class="option">
+    <img src="images/person.jpg">
+    <input id="Year4" type="radio" name="Year" data-rel="Positions" class="trigger" value="Masters">
+	<label for="Year4">Masters</label>  
+	</div>
+
+	
+	<div class="option">
+    <img src="images/person.jpg">
+    <input id="Year4" type="radio" name="Year" data-rel="Positions" class="trigger" value="Masters">
+	<label for="Year4">Masters</label>  
+	</div>
+
+	
+	<div class="option">
+    <img src="images/person.jpg">
+    <input id="Year4" type="radio" name="Year" data-rel="Positions" class="trigger" value="Masters">
+	<label for="Year4">Masters</label>  
+	</div>
+
+	
+	<div class="option">
+    <img src="images/person.jpg">
+    <input id="Year4" type="radio" name="Year" data-rel="Positions" class="trigger" value="Masters">
+	<label for="Year4">Masters</label>  
+	</div>
+	
+	<div class="option">
+    <img src="images/person.jpg">
+    <input id="Year4" type="radio" name="Year" data-rel="Positions" class="trigger" value="Masters">
+	<label for="Year4">Masters</label>  
+	</div>
+	
+	<div class="option">
+    <img src="images/person.jpg">
+    <input id="Year4" type="radio" name="Year" data-rel="Positions" class="trigger" value="Masters">
+	<label for="Year4">Masters</label>  
+	</div>
+  
+  </div>
+			<div class="buttons">
+			
+    <button class="btn btn-primary">Submit</button>
+    <input type="reset" value="Clear" id="Reset" class="btn btn-danger" />
+   
+			</div>
+        </form>
+            
+      
+
+
+  
+      <script>
+$('#Reset').click(function(){
+            $('#container')[0].reset();
+ });
+ </script>
+      
+     <!-- Bootstrap core JavaScript -->
+   <script src="https://dl.dropboxusercontent.com/u/23834858/lib/zepto/zepto.min.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <!-- Page Specific Plugins -->
+    
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+    <script src="scripts/chart-data-morris.js"></script>
+    <script src="scripts/jquery.tablesorter.js"></script>
+    <script src="scripts/tables.js"></script>
+
+  </body>
+</html>

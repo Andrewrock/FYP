@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Create a New Election</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/NewCreate.css" rel="stylesheet">
+
+	
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+    
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/jquery.validate.js"></script>
+	
+  	<script>
+	  $(function() {
+	  $( "#datepicker" ).datepicker();
+	  });
+	 </script>
+	 
+	 <script>
+	  $(function() {
+	  $( "#datepicker2" ).datepicker();
+	  });
+	 </script>
+	 
+	 <script>
+	  $(function() {
+	  $( "#datepicker3" ).datepicker();
+	  });
+	 </script>
+</head>
+
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Uvote Admin</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> On-going Elections</a></li>
+            <li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Previous Elections</a></li>
+            <li><a href="NewCreate.html"><i class="fa fa-table"></i> Create Election</a></li>
+            <li><a href="ReminderEmail.html"><i class="fa fa-edit"></i> Send reminder emails</a></li>
+            <li><a href="AdminSignup.php"><i class="fa fa-font"></i> Add Admin</a></li>
+            <li><a href="AdminHome.html"><i class="fa fa-desktop"></i> Home</a></li>
+            <li><a href="Adminlogout.php"><i class="fa fa-pencil"></i> Logout</a></li>
+            
+            </li>
+          </ul>
+
+         </div><!-- /.navbar-collapse -->
+      </nav>
+      
+      
+			<div class="row">
+  			<div class="col-lg-13">
+	  		<div class="panel panel-primary">
+		  	<div class="panel-heading">
+			<h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Create Election </h3>
+			</div>
+			<div class="panel-body">
+			<h1 class="blue">Fill out the form below</h1>
+				<hr>
+        
+        <form class="create">
+		<p class="textbox">Election Title<input type="text" id="ElectionTitle" name="ElectionTitle" /></p>
+        <div class="demo">
+		 <p class="textbox">Election start date: <input type="text" id="datepicker" name="datepicker" /></p>
+        </div>
+        <div class="demo">
+         <p class="textbox">Election end date: <input type="text" id="datepicker2" name="datepicker2" /></p>
+        </div>
+         <div class="demo">
+         <p class="textbox">Deadline to register as candidate: <input type="text" id="datepicker3" name="datapicker3" /></p>
+         </div>
+         
+         
+         	      	        
+           <div class="radios">
+           <p class="textbox">What type of Election</p>
+	<input id="ClassElections" type="radio" name="group1" class="trigger1" data-rel="BISCLass" value="ClassElections">
+	
+	<label for="ClassElections">Class elections</label>
+	
+	<input id="SocietyElections" type="radio" name="group1"  data-rel="Positions" class="trigger"  value="SocietyElections">
+	<label for="SocietyElections">BIS Society</label>
+</div>
+
+
+         	        
+          		<hr>
+          	<div class="Positions content">
+          		<div class="checkbox">
+		<p class="textbox">Which positions are available</p>
+		<input  id="chkAuditor" type="checkbox" name="check" value="Auditor" data-rel"Positions" class="trigger">
+    <label for="chkAuditor">Auditor</label>
+    
+    <br>
+    
+    <input id="chkVice" type="checkbox" name="check" value="ViceAuditor" data-rel"Positions" class="trigger">
+    <label for="chkVice">Vice Auditor</label>
+    
+    <br>
+    
+    <input id="chkSocial"  type="checkbox" name="check" value="SocialOfficer" data-rel"Positions" class="trigger">
+    <label for="chkSocial">Social Officer</label>		
+    
+    <br>
+    
+    <input id="chkEducation" type="checkbox" name="check" value="EducationOfficer" data-rel"Positions" class="trigger">
+    <label for="chkEducation">Education Officer</label>
+    
+    <br>
+    
+    <input id="chkSports" type="checkbox" name="check" value="SportsOfficer" data-rel"Positions" class="trigger">
+    <label for="chkSports">Sports Officer</label>
+    
+    <br>
+    
+    <input id="chkSecretary" type="checkbox" name="check" value="Secretary" data-rel"Positions" class="trigger">
+    <label for="chkSecretary">Secretary</label>
+    
+	 <br>
+	
+	<input id="chkFinanceOfficer" type="checkbox" name="check" value="FinanceOfficer" data-rel"Positions" class="trigger">
+    <label for="chkFinanceOfficer">Finance Officer</label>
+   
+    <br>
+     
+    <input id="chkMastersRep" type="checkbox" name="check" value="MastersRep" data-rel"Positions" class="trigger">
+    <label for="chkMastersRep">Masters Rep</label>
+    
+    <hr>
+   
+          		</div> 		
+    </div>  		
+          		
+      
+		<div class="checkbox1">
+		<p class="textbox">Which year can vote</p>
+	<input id="check1" type="checkbox" value="check1" name="check_all">
+    <label for="check1">All students</label>
+    
+    <br>
+    
+    <input id="check2" type="checkbox" name="checked" class="idRow" value="check2">
+    <label for="check2">1st Years</label>
+    
+    <br>
+    
+    <input id="check3" type="checkbox" name="checked" class="idRow" value="check3">
+    <label for="check3">2nd Years</label>		
+    
+    <br>
+    
+    <input id="check4" type="checkbox" name="checked" class="idRow" value="check4">
+    <label for="check4">3rd Years</label>
+    
+    <br>
+    
+    <input id="check5" type="checkbox" name="checked" class="idRow" value="check5">
+    <label for="check5">4th Years</label>
+    
+    <br>
+    
+    <input id="check6" type="checkbox" name="checked" class="idRow" value="check6">
+    <label for="check6">Masters</label>
+    </div>
+        	        
+           <div class="radio">
+           <p class="textbox">Send email to students</p>
+	<input id="Yes" type="radio" name="group2" value="Yes">
+	<label for="Yes">Yes</label>
+	<input id="No" type="radio" name="group2" value="No">
+	<label for="No">No</label>
+</div>
+
+            
+			<br />
+			
+			<div class="buttons">
+            <input type="submit" value="Submit" id="Submit" class="btn btn-primary" />
+            
+            <input type="submit" value="Clear" id="Reset" class="btn btn-danger" />
+			</div>
+        </form>
+              </div></div></div></div>
+      
+ 
+
+<script>
+$('#Reset').click(function(){
+            $('#Election')[0].reset();
+ });
+ </script>
+ 
+ <script>
+	 $('.trigger').click(function(){
+		 $('.content').show();
+		 $('.' +(this).data('rel')).show();
+	 });
+ </script>
+ 
+ <script>
+ $('.trigger1').click(function(){
+	 $('.content').hide();
+	 $('.' +(this).data('rel')).hide();
+ });
+ </script>
+ 
+
+ 
+ <script>
+   $(document).on(' change','input[name="check_all"]',function() {
+            $('.idRow').prop("checked" , this.checked);
+    });
+</script> 
+  
+      
+      
+    <!-- Bootstrap core JavaScript -->
+     <!-- Bootstrap core JavaScript -->
+   
+    <script src="scripts/bootstrap.js"></script>
+    <!-- Page Specific Plugins -->
+    
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+    <script src="scripts/chart-data-morris.js"></script>
+    <script src="scripts/jquery.tablesorter.js"></script>
+    <script src="scripts/tables.js"></script>
+
+  </body>
+</html>

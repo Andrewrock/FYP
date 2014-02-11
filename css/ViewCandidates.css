@@ -1,0 +1,13 @@
+.profile{
+	background:none repeat scroll 0 0 #47A3DA;
+	border-radius:50%;
+	height:140px;
+	margin: 0 auto;
+	width:140px;
+}
+
+.profile img{
+	border-radius:50%;
+	max-width:100%;
+	opacity:0.6;
+}
